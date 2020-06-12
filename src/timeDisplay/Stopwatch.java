@@ -11,14 +11,12 @@ public class Stopwatch extends JPanel{
 
 
 	private static final long serialVersionUID = 1931099373284641987L;
-	private boolean hasButton;
 	private String RunningButton, StoppedButton;
 	private StopwatchDisplay t;
 
-	public Stopwatch(String a, String b, boolean button) {
+	public Stopwatch(String a, String b) {
 		RunningButton = b;
 		StoppedButton = a;
-		hasButton = button;
 	}
 
 	public void Start() {
@@ -29,7 +27,6 @@ public class Stopwatch extends JPanel{
 		t.setForeground( new Color(180,0,0) );
 		t.setOpaque(true);
 		add(t, BorderLayout.CENTER);
-		if(hasButton) {
 			JButton onOffSwitch = new JButton(RunningButton);
 			onOffSwitch.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
@@ -39,7 +36,7 @@ public class Stopwatch extends JPanel{
 				}
 			});
 			if(t.getButtonText().length() != 0) add(onOffSwitch, BorderLayout.SOUTH);
-		}
+		
 		
 	}
 
