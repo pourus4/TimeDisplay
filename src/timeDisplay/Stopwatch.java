@@ -43,7 +43,7 @@ public class Stopwatch extends JPanel{
 	public void Stop() {
 		t.start();
 	}
-	public long MillisRunning() {
+	public String runTime() {
 		return t.runTime();
 	}
 

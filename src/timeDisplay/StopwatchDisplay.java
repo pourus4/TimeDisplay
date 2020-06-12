@@ -85,25 +85,10 @@ public class StopwatchDisplay extends JLabel implements MouseListener, ActionLis
 			endString = "StopWatch was stopped instantly.";
 		} else {
 			if (!Hours.equals("00")) {
-				if (!Minutes.equals("00") || !Seconds.equals("00") || !MilliSeconds.equals("000"))
-					endString = Hours + " Hours, ";
-				else
-					endString = Hours + " Hours.";
+				endString += Hours + ":" + Minutes + ":" + Seconds + "." + MilliSeconds;
 			}
-			if (!Minutes.equals("00")) {
-				if (!Seconds.equals("00") || !MilliSeconds.equals("000"))
-					endString += Minutes + " Minutes, ";
-				else
-					endString += Minutes + " Minutes.";
-			}
-			if (!Seconds.equals("00")) {
-				if (!MilliSeconds.equals("000"))
-					endString += Seconds + " Seconds, ";
-				else
-					endString += Seconds + " Seconds";
-			}
-			if (!MilliSeconds.equals("000")) {
-				endString += MilliSeconds + " MilliSeconds.";
+			else{
+				endString += Minutes + ":" + Seconds + "." + MilliSeconds;
 			}
 		}
 	}
@@ -169,8 +154,8 @@ public class StopwatchDisplay extends JLabel implements MouseListener, ActionLis
 
 	}
 
-	public long runTime() {
-		return endTime - startTime;
+	public String runTime() {
+		return endString;
 	}
 
 	public void mouseReleased(MouseEvent evt) {
