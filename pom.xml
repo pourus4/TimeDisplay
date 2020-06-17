@@ -3,6 +3,9 @@
   <groupId>com.github.pourus4</groupId>
   <artifactId>TimeDisplay</artifactId>
   <version>1.0</version>
+
+  <packaging>jar</packaging>
+
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
