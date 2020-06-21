@@ -28,9 +28,9 @@ public class CountDownDisplay extends JLabel implements ActionListener {
 		long currentTime = System.currentTimeMillis() - startTime;
 		long time = (runTime - currentTime);
 		if (time <= 0) {
+			running = false;
 			setText(endString);
 			timer.stop();
-			running = false;
 		} else {
 			timeRemaining = "";
 			Hours(time);
