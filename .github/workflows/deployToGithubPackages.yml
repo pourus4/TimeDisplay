@@ -3,8 +3,8 @@
 name: Publish maven package
 
 on:
-  push:
-    branches: [dev]
+  release:
+    types: [created]
 
 jobs:
   publish:
