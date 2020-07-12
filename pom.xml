@@ -40,9 +40,9 @@
 
   <distributionManagement>
     <repository>
-      <id>internal.repo</id>
-      <name>TimeDisplay</name>
-      <url>https://github.com/pourus4/TimeDisplay</url>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/pourus4/TimeDisplay</url>
     </repository>
   </distributionManagement>
 
