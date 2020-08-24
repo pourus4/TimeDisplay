@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
@@ -8,35 +8,11 @@
   <packaging>jar</packaging>
 
   <name>TimeDisplay</name>
-  <description>create timer and stopwatch displays inside of a frame</description>
   <url>https://github.com/pourus4/TimeDisplay</url>
 
-  <organization>
-    <name>com.github.pourus4</name>
-    <url>https://github.com/pourus4</url>
-  </organization>
-
-  <issueManagement>
-    <system>GitHub</system>
-    <url>https://github.com/pourus4/TimeDisplay/issues</url>
-  </issueManagement>
-
-  <licenses>
-    <license>
-      <name>MIT License</name>
-      <url>http://www.opensource.org/licenses/mit-license.php</url>
-    </license>
-  </licenses>
-
-  <scm>
-    <url>https://github.com/pourus4/TimeDisplay</url>
-    <connection>
-      scm:git:git://github.com/pourus4/TimeDisplay
-    </connection>
-    <developerConnection>
-      scm:git:ssh://github.com:pourus4/TimeDisplay
-    </developerConnection>
-  </scm>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
   <distributionManagement>
     <repository>
@@ -45,13 +21,6 @@
       <url>https://maven.pkg.github.com/pourus4/TimeDisplay</url>
     </repository>
   </distributionManagement>
-
-  <developers>
-    <developer>
-      <name>pourus4</name>
-    </developer>
-  </developers>
-
 
   <build>
     <sourceDirectory>src</sourceDirectory>
