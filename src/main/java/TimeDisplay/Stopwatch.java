@@ -49,6 +49,10 @@ public class Stopwatch extends JPanel {
 	public void Stop() {
 		t.start();
 	}
+	
+	public void pause() {
+		t.pause();
+	}
 
 	public String runTime() {
 		return t.runTime();
