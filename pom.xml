@@ -8,11 +8,19 @@
   <packaging>jar</packaging>
 
   <name>TimeDisplay</name>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/pourus4/TimeDisplay</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Maven Packages</name>
+      <url>https://maven.pkg.github.com/pourus4/TimeDisplay</url>
+    </repository>
+  </distributionManagement>
 
   <dependencies>
     <dependency>
