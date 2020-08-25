@@ -10,7 +10,7 @@ import javax.swing.Timer;
 public class CountDownDisplay extends JLabel implements ActionListener {
 	private static final long serialVersionUID = 1L;
 
-	private long startTime, runTime;
+	private long startTime, runTime, pauseTime;
 
 	private String MilliSeconds, Seconds, Minutes, Hours, timeRemaining, endString;
 	private boolean running;
@@ -61,6 +61,19 @@ public class CountDownDisplay extends JLabel implements ActionListener {
 		} else {
 			startTime = System.currentTimeMillis();
 			timer.restart();
+			running = true;
+		}
+	}
+
+	public void pause() {
+		if(running) {
+			pauseTime = System.currentTimeMillis();
+			timer.stop();
+			running = false;
+		} else {
+			long elapsed = System.currentTimeMillis() - pauseTime;
+			startTime += elapsed;
+			timer.start();
 			running = true;
 		}
 	}
