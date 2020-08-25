@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CountDown extends JPanel{
+public class CountDown extends JPanel {
 	/**
 	 * 
 	 */
@@ -17,29 +17,33 @@ public class CountDown extends JPanel{
 	private CountDownDisplay c;
 	private int time;
 	private String timeOut;
-	
-	public CountDown(int t, String str) {
+	private boolean pauseAble;
+
+	public CountDown(int t, String str, boolean p) {
 		time = t;
 		timeOut = str;
+		pauseAble = p;
 	}
-	
+
 	public void Start() {
 		c = new CountDownDisplay(time, timeOut);
-		
-		c.setFont( new Font("SansSerif", Font.BOLD, 24) );
+
+		c.setFont(new Font("SansSerif", Font.BOLD, 24));
 		c.setBackground(Color.white);
-		c.setForeground( new Color(0,0,0) );
+		c.setForeground(new Color(0, 0, 0));
 		c.setOpaque(true);
 		add(c, BorderLayout.CENTER);
 		JButton pauseButton = new JButton("Pause/Resume");
-		pauseButton.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
+		pauseButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
 				c.pause();
 			}
 		});
-		add(pauseButton, BorderLayout.SOUTH);
+		if (pauseAble) {
+			add(pauseButton, BorderLayout.SOUTH);
+		}
 	}
-	
+
 	public boolean isRunning() {
 		return c.isRunning();
 	}

@@ -9,10 +9,12 @@ public class Stopwatch extends JPanel {
 
 	private static final long serialVersionUID = 1931099373284641987L;
 	private String ButtonLable;
+	private boolean pauseAble;
 	private StopwatchDisplay t;
 
-	public Stopwatch(String a) {
+	public Stopwatch(String a, boolean p) {
 		ButtonLable = a;
+		pauseAble = p;
 	}
 
 	public void Start() {
@@ -29,16 +31,18 @@ public class Stopwatch extends JPanel {
 				t.start();
 			}
 		});
-		if (ButtonLable.length() != 0){
+		if (ButtonLable.length() != 0) {
 			add(onOffSwitch, BorderLayout.SOUTH);
 		}
 		JButton pauseButton = new JButton("Pause/Resume");
-		pauseButton.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
+		pauseButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
 				t.pause();
 			}
 		});
-		add(pauseButton, BorderLayout.SOUTH);
+		if (pauseAble) {
+			add(pauseButton, BorderLayout.SOUTH);
+		}
 
 	}
 
