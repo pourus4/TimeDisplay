@@ -1,4 +1,4 @@
-package timeDisplay;
+package TimeDisplay;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
