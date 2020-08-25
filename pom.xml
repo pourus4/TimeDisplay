@@ -17,8 +17,8 @@
   <distributionManagement>
     <repository>
       <id>github</id>
-      <name>GitHub pourus4 Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/pourus4/maven-packages</url>
+      <name>GitHub Maven Packages</name>
+      <url>https://maven.pkg.github.com/pourus4/timedisplay</url>
     </repository>
   </distributionManagement>
 
