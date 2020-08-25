@@ -4,7 +4,7 @@
 
   <groupId>com.github.pourus4</groupId>
   <artifactId>TimeDisplay</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>1.0</version>
   <packaging>jar</packaging>
 
   <name>TimeDisplay</name>
