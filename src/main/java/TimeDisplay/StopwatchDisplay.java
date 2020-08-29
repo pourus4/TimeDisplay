@@ -160,7 +160,11 @@ public class StopwatchDisplay extends JLabel implements MouseListener, ActionLis
 	}
 
 	public String runTime() {
+		if(endString == null){
+			return getText();
+		} 
 		return endString;
+		
 	}
 
 	public void mouseReleased(MouseEvent evt) {
